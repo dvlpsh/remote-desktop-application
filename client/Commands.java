@@ -14,8 +14,8 @@ public enum Commands
 		this.abbrev=abbrev;	
 	}
 	
-	public void getAbbrev()
+	public int getAbbrev()
 	{
-		retun abbrev;
+		return abbrev;
 	}
 }

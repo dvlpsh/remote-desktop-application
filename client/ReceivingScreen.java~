@@ -1,6 +1,6 @@
 import java.io.ObjectInputStream;
 import java.io.InputStream;
-import javax.image.io.ImageIO;
+import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 import java.awt.Image;
 import java.awt.Graphics;
@@ -45,12 +45,12 @@ class ReceivingScreen extends Thread
 			while(true)
 			{
 				//we read the screenshots in the form of byte array
-				byte bytes[] = new bytes[1024*1024];
+				byte bytes[] = new byte[1024*1024];
 				int count = 0;
 				
 				do
 				{
-					count+=oin.read(bytes, count, length-count);
+					count+=oin.read(bytes, count, bytes.length-count);
 					/*
 					count is the offset at which the data is written in the byte array
 					length-count is the no of bytes of data read by our inputStream, if inpit string is EOF then value returned is -1
@@ -61,8 +61,8 @@ class ReceivingScreen extends Thread
 				image1 = ImageIO.read(new ByteArrayInputStream(bytes));
 				image1 = image1.getScaledInstance(cPanel.getWidth(), cPanel.getHeight(), Image.SCALE_FAST);
 				
-				Graphic graphics = cPanel.Graphics();
-				graphics.drawImage(image1, 0, 0, getWidth(), cPanel.getHeight(), cPanel);
+				Graphics graphics = cPanel.getGraphics();
+				graphics.drawImage(image1, 0, 0, cPanel.getWidth(), cPanel.getHeight(), cPanel);
 				
 			}
 		

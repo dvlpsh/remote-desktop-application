@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.JDesktopPane;
 import java.net.Socket;
 import java.io.InputStream;
+import java.io.IOException;
 import java.util.zip.*;
 /* zip is used for compressing and decompressing the data used from the server side, and reading and writing of zip files*/
 
@@ -55,7 +56,7 @@ class CreateFrame extends Thread //thread is connected to server
 		//show internal frame as maximised version
 		try
 		{
-			interframe.setMaximum(true);
+			interFrame.setMaximum(true);
 		}
 		catch(PropertyVetoException e)//might cause errors if we try to make changes in the internal windows
 		{

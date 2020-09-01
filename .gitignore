@@ -1,0 +1,11 @@
+server/Start.class
+server/SetPassword.class
+server/InitConnection.class
+server/Sendscreen.class
+server/ReceiveEvents.class
+client/Start.class
+client/Authentication.class
+client/Commands.class
+client/CreateFrame.class
+client/ReceivingScreen.class
+client/SendEvents.class
