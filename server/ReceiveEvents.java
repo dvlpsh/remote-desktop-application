@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class ReceiveEvents extends Thread
+class ReceiveEvents extends Thread
 {
 	//receive server command and execute them on client side
 	

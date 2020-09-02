@@ -7,7 +7,7 @@ import java.net.Socket;
 import javax.imageio.ImageIO;
 
 
-public class SendScreen extends Thread //send events in terms of thread object
+class SendScreen extends Thread //send events in terms of thread object
 {
 	Socket socket = null;
 	Robot robot = null;

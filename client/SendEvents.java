@@ -55,9 +55,6 @@ class SendEvents implements KeyListener, MouseMotionListener, MouseListener
 	public void mouseDragged(MouseEvent e)//select & drag object on screen
 	{
 	
-	
-	
-	
 	}
 	
 	

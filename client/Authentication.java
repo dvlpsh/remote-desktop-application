@@ -23,7 +23,7 @@ class Authentication extends JFrame implements ActionListener
 	JPanel panel;
 	JLabel label,label1;
 	String width="", height="";
-	JTextField text1;
+	final JTextField text1;
 
 
 	//constructor
@@ -36,8 +36,8 @@ class Authentication extends JFrame implements ActionListener
 		
 		label = new JLabel();
 		label.setText("");
-		
 		this.setLayout(new BorderLayout());
+		
 		submit = new JButton("Submit"); 
 		
 		panel = new JPanel(new GridLayout(2,1));//width : height = 2:1

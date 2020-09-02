@@ -16,10 +16,12 @@ class CreateFrame extends Thread //thread is connected to server
 {
 	String width="", height=""; //width and height of the frame
 	private JFrame frame = new JFrame();
-	private JDesktopPane desktop = new JDesktopPane();
+	
 	/* 
 		main container that contains all connected client screen
 	*/
+	private JDesktopPane desktop = new JDesktopPane();
+	
 	private Socket cSocket = null;
 	private JInternalFrame interFrame = new JInternalFrame("Server Screen", true, true, true);
 	/* internal frame to access smaller frames inside the server screen
